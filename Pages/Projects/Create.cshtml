@@ -1,0 +1,23 @@
+﻿@page
+@model lab5.Pages.Projects.CreateModel
+
+<form method = "post">
+	<label>Project name</label>
+	<input asp-for="_project.Name" />
+	<span asp-validation-for="_project.Name"></span>
+	<br/>
+	<label>DateOfStart</label>
+	<input asp-for="_project.DateOfStart" />
+	<span asp-validation-for="_project.DateOfStart"></span>
+	<br/>
+	<label>DateOfEnd</label>
+	<input asp-for="_project.DateOfEnd"  />
+	<span asp-validation-for="_project.DateOfEnd"></span>
+	<br/>
+	<label>Description</label>
+	<input asp-for="_project.Description"  />
+	<span asp-validation-for="_project.Description"></span>
+	<br/>
+	<button type="submit">Add new project</button>
+	<button>Return to all projects</button>
+</form>

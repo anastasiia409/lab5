@@ -1,0 +1,65 @@
+﻿@page
+@model lab5.Pages.Projects.IndexModel
+<h1>Projects</h1>
+@{
+    if(TempData["success"] != null)
+    {
+        <h1>@TempData["success"]</h1>
+    }
+}
+<a asp-page="Create" class="btn btn-primary">Add new project</a>
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                DateOfStart
+            </th>
+            <th>
+                DateOfEnd
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var project in Model._projects)
+        {
+            <tr>
+                <td>
+                    @project.Id
+                </td>
+                <td>
+                    @project.Name
+                </td>
+                <td>
+                    @project.DateOfStart
+                </td>
+                <td>
+                    @project.DateOfEnd
+                </td>
+                <td>
+                    @project.Description
+                </td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@project.Id" class="btn btn-warning">Edit project</a>
+                </td>
+                <td>
+                    <a asp-page="Delete" asp-route-id="@project.Id" class="btn btn-danger">Delete project</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,42 @@
+﻿@page
+@model lab5.Pages.EmployeeProjects.CreateModel
+
+<h1>Create new employee's project</h1>
+
+<form method="post">
+	<div class"mb-3">
+		<label>Choose employee</label>
+		<select asp-for="_eprojects.EmployeeId" asp-items="@Model._items">
+			<option>Choose employee</option>
+		</select>
+		<span asp-validation-for="_eprojects.EmployeeId"></span>
+		
+	</div>
+
+	<div class"mb-3">
+		<label>Choose project</label>
+		<select asp-for="_eprojects.ProjectId" asp-items="@Model._items1">
+			<option>Choose project</option>
+		</select>
+		<span asp-validation-for="_eprojects.ProjectId"></span>
+	</div>
+
+	<div class"mb-3">
+		<label>Choose position</label>
+		<select asp-for="_eprojects.PositionId" asp-items="@Model._items2">
+			<option>Choose position</option>
+		</select>
+		<span asp-validation-for="_eprojects.PositionId"></span>
+	</div>
+
+	<div class"mb-3">
+		<label>Date of join</label>
+		<input asp-for="_eprojects.DateOfJoin" type="date" />
+		<span asp-validation-for="_eprojects.DateOfJoin"></span>
+	</div>
+
+
+	<button type="submit">Create new ticket</button>
+	<button><a asp-page="Index">Return to all tickets</a></button>
+
+</form>

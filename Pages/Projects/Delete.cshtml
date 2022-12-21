@@ -1,0 +1,21 @@
+﻿@page
+@model lab5.Pages.Projects.DeleteModel
+
+<form method = "post">
+	<input asp-for="_employee.Id" hidden />
+	<label>Name of project</label>
+	<input asp-for="_project.Name" disabled />
+	<br/>
+	<label>DateOfStart</label>
+	<input asp-for="_project.DateOfStart" disabled />
+	<br/>
+	<label>DateOfEnd</label>
+	<input asp-for="_project.DateOfEnd" disabled />
+	<br/>
+	<label>Description</label>
+	<input asp-for="_project.Description" disabled />
+	<br/>
+	<button type="submit">Delete project</button>
+	<button><a asp-page="Index">Return to all projects</a></button>
+</form>
+

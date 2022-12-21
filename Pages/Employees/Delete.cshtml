@@ -1,0 +1,21 @@
+﻿@page
+@model lab5.Pages.Employees.DeleteModel
+
+<form method = "post">
+	<input asp-for="_employee.Id" hidden />
+	<label>Employee's Name'</label>
+	<input asp-for="_employee.Name" disabled />
+	<br/>
+	<label>Surname</label>
+	<input asp-for="_employee.Surname" disabled />
+	<br/>
+	<label>Address</label>
+	<input asp-for="_employee.Address" disabled />
+	<br/>
+	<label>Description</label>
+	<input asp-for="_employee.Description" disabled />
+	<br/>
+	<button type="submit">Delete _employee</button>
+	<button><a asp-page="Index">Return to all employees</a></button>
+</form>
+

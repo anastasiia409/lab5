@@ -1,0 +1,15 @@
+﻿@page
+@model lab5.Pages.Positions.DeleteModel
+
+<form method = "post">
+	<input asp-for="_position.Id" hidden />
+	<label>Name of position</label>
+	<input asp-for="_position.Name" disabled />
+	<br/>
+	<label>Salary</label>
+	<input asp-for="_position.Salary" disabled />
+	<br/>
+	
+	<button type="submit">Delete _position</button>
+	<button><a asp-page="Index">Return to all positions</a></button>
+</form>

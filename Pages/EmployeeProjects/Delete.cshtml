@@ -1,0 +1,28 @@
+﻿@page
+@model lab5.Pages.EmployeeProjects.DeleteModel
+
+<h1>Delete information about employee project</h1>
+
+<form method="post">
+	<input asp-for="_eproject.Id" hidden />
+	<div class"mb-3">
+		<label>Employee id</label>
+		<input asp-for="_eproject.EmployeeId" disabled />
+	</div>
+	<div class"mb-3">
+		<label>Project id</label>
+		<input asp-for="_eproject.ProjectId" disabled />
+	</div>
+	<div class"mb-3">
+		<label>Position id</label>
+		<input asp-for="_eproject.PositionId" disabled />
+	</div>
+	<div class"mb-3">
+		<label>Date of Join</label>
+		<input asp-for="_eproject.DateOfJoin" disabled />
+	</div>
+	
+	<button type="submit">Delete information about employee's project</button>
+	<button><a asp-page="Index">Return to all epmployee;scprojects</a></button>
+
+</form>

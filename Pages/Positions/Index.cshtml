@@ -1,0 +1,56 @@
+﻿@page
+@model lab5.Pages.Positions.IndexModel
+
+<h1>Positions</h1>
+@{
+    if(TempData["success"] != null)
+    {
+        <h1>@TempData["success"]</h1>
+    }
+}
+<a asp-page="Create" class="btn btn-primary">Add new position</a>
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Salary
+            </th>
+            <th>
+
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var position in Model._positions)
+        {
+            <tr>
+                <td>
+                    @position.Id
+                </td>
+                <td>
+                    @position.Name
+                </td>
+                <td>
+                    @position.Salary
+                </td>
+               
+                <td>
+                    <a asp-page="Edit" asp-route-id="@position.Id" class="btn btn-warning">Edit position</a>
+                </td>
+                <td>
+                    <a asp-page="Delete" asp-route-id="@position.Id" class="btn btn-danger">Delete position</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

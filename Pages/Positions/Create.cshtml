@@ -1,0 +1,15 @@
+﻿@page
+@model lab5.Pages.Positions.CreateModel
+
+<form method = "post">
+	<label>Name of position</label>
+	<input asp-for="_position.Name" />
+	<span asp-validation-for="_position.Name"></span>
+	<br/>
+	<label>Salary</label>
+	<input asp-for="_position.Salary" />
+	<span asp-validation-for="_position.Salary"></span>
+	<br/>
+	<button type="submit">Add new position</button>
+	<button>Return to all positions</button>
+</form>

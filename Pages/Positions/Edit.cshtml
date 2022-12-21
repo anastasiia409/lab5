@@ -1,0 +1,18 @@
+﻿@page
+@model lab5.Pages.Positions.EditModel
+
+
+<form method = "post">
+	<input asp-for="_position.Id" hidden />
+	<label>Name of position</label>
+	<input asp-for="_position.Name" />
+	<span asp-validation-for="_employee.Name"></span>
+	<br/>
+	<label>Salary</label>
+	<input asp-for="_position.Salary" />
+	<span asp-validation-for="_position.Salary"></span>
+	<br/>
+	
+	<button type="submit">Update position</button>
+	<button><a asp-page="Index">Return to all positions</a></button>
+</form>

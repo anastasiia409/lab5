@@ -1,0 +1,23 @@
+﻿@page
+@model lab5.Pages.Employees.CreateModel
+
+<form method = "post">
+	<label>Employee name</label>
+	<input asp-for="_employee.Name" />
+	<span asp-validation-for="_employee.Name"></span>
+	<br/>
+	<label>Author</label>
+	<input asp-for="_employee.Surname" />
+	<span asp-validation-for="_employee.Surname"></span>
+	<br/>
+	<label>Employee's Address'</label>
+	<input asp-for="_employee.Address"  />
+	<span asp-validation-for="_employee.Address"></span>
+	<br/>
+	<label>Description</label>
+	<input asp-for="_employee.Description"  />
+	<span asp-validation-for="_employee.Description"></span>
+	<br/>
+	<button type="submit">Add new employee</button>
+	<button>Return to all employees</button>
+</form>
